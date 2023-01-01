@@ -24,11 +24,10 @@ class ProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'string|min:5|max:20|unique:users',
-            'email' => 'string|email|unique:users',
-            'password' => 'string|min:5|max:20',
-            'phone' => 'min:10|max:13',
-            'address' => 'string|min:5',
+            'username' => 'nullable|string|min:5|max:20|unique:users',
+            'email' => 'nullable|string|email|unique:users',
+            'phone' => 'nullable|min:10|max:13',
+            'address' => 'nullable|string|min:5',
         ];
     }
 }

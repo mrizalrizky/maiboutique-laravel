@@ -40,7 +40,7 @@ class CartController extends Controller
         return redirect()->route('cart');
     }
 
-    public function updateCart(Request $request) {
+    public function updateCart(CartRequest $request) {
         $cartItem = Cart::where('product_id', $request->product_id)->first();
         $cartItem->update([
             'qty' => $request->qty,

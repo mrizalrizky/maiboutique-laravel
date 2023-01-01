@@ -35,7 +35,7 @@
                     <p>{{ $product->description}}</p>
                     <div class="single-product-form">
                         <form action="index.html">
-                            <input type="number" placeholder="0">
+                            <input type="number" placeholder="1">
                         </form>
                         <a href="{{ route('index') }}" class="cart-btn">Back</a>
                         <a href="{{ route('cart') }}" class="cart-btn"><i class="fas fa-wrench"></i> Update Cart</a>
